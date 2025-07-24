@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ 
+  <script>
+    //tarefas num array vazio
+    let tarefas = [];
+
+    let adicionarTarefas = function (tarefa) {
+      tarefas.push(tarefa);
+      console.log(`tarefa: ${tarefa}`);
+    };
+
+    adicionarTarefas("estudar")
+    adicionarTarefas("fazer exercicio")
+
+    console.log(tarefas);
+
+    //     * Uso de Arrow Functions:
+    //  - Implemente uma arrow function para listar todas as tarefas, exibindo cada tarefa com seu índice no console.
+
+    let tarefas1 = [" estudar", "ler", "assitir video"]
+    const listarTarefas = () => {
+      tarefas1.forEach((tarefa1, indice) => {
+        console.log(`${indice + 1}. ${tarefa1} `);
+      });
+    };
+
+    listarTarefas();
+
+    // * Funções de Callback:
+    //  - Crie uma função que receba outra função como callback. Essa função deve permitir 
+    // executar diferentes operações com a lista de tarefas, como:
+    //  - Remover uma tarefa.
+    //  - Atualizar uma tarefa.
+    //  - Concluir uma tarefa.
+
+    let tarefas2 = [
+      { descricao: "ler", concluida: false },
+      { descricao: "olhar", concluida: false },
+      { descricao: "escrever", concluida: false },
+    ];
+
+    function executarOperacao(callback) {
+      callback(tarefas2);
+    }
+
+    const removerTarefa = (lista) => {
+      lista.splice(1, 1);
+      console.log("remova");
+    };
+
+
+    const atualizarTarefa = (lista) => {
+      lista[0].descricao = "estudar js ";
+      console.log("atualizada");
+    };
+
+    const concluirTarefa = (lista) => {
+      lista[lista.length - 1].concluida = true;
+      console.log("concluída.");
+    };
+
+    executarOperacao(removerTarefa);
+    executarOperacao(atualizarTarefa);
+    executarOperacao(concluirTarefa);
+
+
+    console.log("lista de tarefas:");
+    tarefas2.forEach((tarefas2, index) => {
+      console.log(`${index + 1}. ${tarefas2.descricao} - ${tarefas2.concluida ? "Concluída" : "Pendente"}`);
+    });
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

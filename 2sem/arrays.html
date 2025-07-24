@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1> teste </h1>
+
+  <script>
+    // const a = [1,2,3,4,5,6,7,8,9]
+    // const a = ["hum", "dois", "tres"]
+    // const n = [1, 2, 3, 44, 65, 10]
+
+    // const a = ["hum", "dois", "tres"]
+
+    const objH1 = document.querySelector("h1")
+    //FOR EACH
+    a.forEach((valor, indice) => {
+      objH1.innerHTML += `${valor} >>> ${indice}<br>`
+    });
+
+    //map
+    let b = a.map((v, i) => `${v} - ${i}`);
+    //comparaçao foreach e map
+    let q = n.map((v, i) => v * v);
+    n.forEach((v, i) => console.log(v * v));
+    console.log(b);
+    console.log(q);
+
+    // for each nao precisa criar array novo - so imprime na tela
+    // map precisa criar um array novo
+
+    //filter
+    const idades = [11, 33, 22, 17, 15, 20];
+
+    let menores = idades.filter(idade => idade < 18); console.log(menores); //somatorio //reduce - serve para somar
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; console.log(numeros.reduce((ac, valor) => ac -= valor, 2)
+    );
+
+
+    //SOME
+
+    console.log([2.0, 2.4, 7.5, 9.9, 10].some(nota => nota === 10))
+
+
+    if ([2.0, 2.4, 7.5, 9.9, 10].some(nota => nota === 10))
+      console.log("alguem tem 10");
+    else
+      console.log("ninguem tem 10");
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

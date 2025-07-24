@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1> Contador de cliques </h1>
+
+  <p id="contador"> Contador</p>
+  <button id="btnclik"> clique aqui: 0 </button>
+
+  <script>
+
+    const p = document.getElementById('contador');
+    const btn = document.getElementById('btnclik');
+    let contador = 0;
+
+    btn.addEventListener('click', () => {
+      contador++;
+      p.textContent = `voce clicou: ${contador} vezes`;
+      p.style.color = 'red';
+      // p.style.color = 'yellow';
+
+      //a cada clique muda para
+    })
+
+
+  </script>
+
+
+</body>
+
+</html>

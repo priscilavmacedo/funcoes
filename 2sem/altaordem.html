@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Funções de Alta Ordem</h1>
+
+  <!-- function executarOperacao(a, b, operacao) {
+  return operacao(a, b);
+}
+
+function somar(x, y) {
+  return x + y;
+}
+
+function multiplicar(x, y) {
+  return x * y;
+} -->
+
+  <!-- Usando a função de alta ordem
+console.log(executarOperacao(3, 4, somar));        
+console.log(executarOperacao(3, 4, multiplicar));  -->
+
+  <script>
+
+    function saudacao(pessoa) {
+      return function (mensagem) {
+        console.log(`$mensagem, $pessoa}"`);
+      };
+    }
+
+    const cumprimento = saudacao("Priscila");
+
+    cumprimento("Olá");
+    cumprimento("Bom dia");
+
+
+  </script>
+
+</body>
+
+</html>
+

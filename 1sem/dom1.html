@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-Br
+">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- Desafio 1: Lista dinâmica
+Crie um input de texto e um botão "Adicionar".
+
+Quando o usuário clicar no botão, pegue o texto do input e adicione como um novo item (<li>) em uma lista (<ul>) já existente na página.
+
+Limpe o campo do input após adicionar o item.
+   -->
+
+
+
+
+  <h1> LISTA DINAMICA</h1>
+
+  <input type="text" id="itemInput" placeholder="Digite um item">
+  <button id="addButton">Adicionar</button>
+
+  <ul id="itemList">
+    <li>sair</li>
+    <li>andar</li>
+    <li>correr</li>
+  </ul>
+
+
+
+  <script>
+    const itemInput = document.getElementById("itemInput");
+    const addButton = document.getElementById("addButton");
+    const itemList = document.getElementById("itemList");
+
+    addButton.addEventListener("click", function () {
+      const newItemText = itemInput.value.trim();
+      // Verifica se o campo não está vazio e armazena na nova variavel
+      if (newItemText) {
+        const newItem = document.createElement("li");
+        newItem.textContent = newItemText;
+        itemList.appendChild(newItem);
+        itemInput.value = ""; // Limpa o campo do input
+      }
+
+
+
+    });
+
+    // quando clicar no botão um novo item a lista sera add e logo apos campo limpo
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
