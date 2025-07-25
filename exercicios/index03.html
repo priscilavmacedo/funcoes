@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //     Atividade 02
+    // Crie uma função chamada calcularDesconto que receba dois parâmetros: preco e desconto.
+    // A função deve calcular o preço final do produto após aplicar o desconto e retornar esse valor.
+    // Chame a função com diferentes valores e exiba o resultado no console.
+
+    // Objetivo:
+    // Desenvolver a compreensão de funções com múltiplos parâmetros em JavaScript, praticando
+    // cálculos matemáticos simples e o retorno de valores.
+
+    function calcularDesconto(preco, desconto) {
+      const valorDesconto = preco * (desconto / 100);
+      const precoFinal = preco - valorDesconto;
+      return precoFinal;
+    }
+
+    console.log(calcularDesconto(100, 10));
+    console.log(calcularDesconto(200, 25));
+    console.log(calcularDesconto(50, 5));
+
+
+    // Atividade 03
+    // Crie uma função chamada calcularSoma que utilize o rest operator para aceitar um número
+    // indefinido de parâmetros e calcular a soma de todos eles.
+    // Chame a função com diferentes quantidades de números e exiba o resultado no console.
+
+    // Objetivo:
+    // O console deve exibir a soma dos números passados para a função.
+
+
+    function calcularSoma(...numeros) {
+      const soma = numeros.reduce((total, num) => total + num, 1);
+      return soma;
+    }
+
+    console.log(calcularSoma(1, 2, 3));
+    console.log(calcularSoma(10, 20, 30));
+
+    // reduce faz a soma e começamoas a soma com zero
+
+
+    function saudacao(nome) {
+      return `ola, ${nome}!`;
+    }
+
+    console.log(saudacao("andrea"));
+    console.log(saudacao("sonia"));
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
