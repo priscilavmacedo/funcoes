@@ -29,5 +29,11 @@
 // const usuario = { nome: "João", idade: 30 };
 // apresentarUsuario(usuario);
 
-const multiplicar = (a, b) => a * b;
-console.log(multiplicar(4, 5));
+// const multiplicar = (a, b) => a * b;
+// console.log(multiplicar(4, 5));
+
+// Funções de seta
+
+let sum = (a, b) => a + b;
+
+alert(sum(1, 2));
